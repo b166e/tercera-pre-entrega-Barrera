@@ -1,0 +1,44 @@
+# Ignorar entornos virtuales
+env/
+venv/
+
+# Ignorar archivos de configuración de PyCharm
+.idea/
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Ignorar archivos de caché de Django
+*.log
+*.pot
+*.pyc
+.mypy_cache/
+.pytest_cache/
+db.sqlite3
+
+# Ignorar archivos de migraciones
+**/migrations/*
+!**/migrations/__init__.py
+
+# Ignorar archivos de node_modules (si usas npm)
+node_modules/
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de medios subidos
+media/
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.coverage
+coverage.xml
+.tox/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+
+# Ignorar archivos de configuración de VSCode
+.vscode/
