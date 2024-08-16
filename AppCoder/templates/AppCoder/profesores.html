@@ -5,32 +5,76 @@
 {% block contenidoQueCambia %}
 
 
-    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Formulario - Agregar Profesor</h1>
-    
-    {% if miFormulario.errors %}
+<!-- subheader. -->
 
-    <p style="color: red;"> Están mal los datos, revisar</p>
-
-    {% endif %}
+<div class="subHeader ">
 
 
-    <form action="" method="POST">{% csrf_token %}
-
-        <!-- Acá está la magia de Django-->
-        
-        <table>
-
-            {{ miFormulario.as_table }}
+</div>
 
 
-        </table>
+
+<div class="row">
+    <div class="col-md-8 darkI"> <img class="img-fluid" src="{%static 'AppCoder/assets/img/Qlik-img-7.jpg' %}"
+            alt="Qlik Sense" />
 
 
-        <input type="submit", value="Enviar">
+    </div>
+    <div class="col-md-4 darkI  padding contacto">
 
-    </form>
 
-  
+        <div class="row ">
+
+            <div class="col-md-12 background_PNG darkI h-100">
+
+                <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+                <h4>Profesor</h4>
+                <p>Agregar </p>
+
+
+                {% if miFormulario.errors %}
+
+                <p style="color: red;"> Están mal los datos, revisar</p>
+
+                {% endif %}
+
+
+                <form action="" method="POST">{% csrf_token %}
+
+                    <!-- Acá está la magia de Django-->
+
+                    <table class="col-12 ">
+
+                        {{ miFormulario.as_table }}
+
+
+                    </table>
+
+         
+<br>
+
+                    <input class="w-100 btn btn-primary btn-lg" type="submit" , value="Enviar">
+
+                </form>
+
+
+
+
+            </div>
+            <div class="col-md-4 dark">
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
 
 {% endblock %}

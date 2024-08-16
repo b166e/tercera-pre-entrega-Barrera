@@ -6,7 +6,7 @@
 
         <div class="text-center">
             <img height="40px" src="{{url}}" >
-            <h3>Que bueno verte {{user.username}}</h3>
+            <h3>Que bueno verte  {{user.username}}</h3>
         </div>
 
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
@@ -32,13 +32,19 @@
 
     <p>Estamos buscando el: {{camada}}</p>
 
-    <ul>
+    <div class="row ">
 	{% for curso in cursos %}
-		<li> {{curso.nombre}} </li>
-		<li> {{curso.camada}} </li>
+
+            <div class="col-lg-4 ml-2">
+              <img class="rounded-circle" src="../assets/img/amd.png">
+              <h2>{{curso.nombre}}</h2>
+              <p class="w-75"> {{curso.camada}} </p>
+              <p><a class="w-50 btn btn-lg btn-primary " href="#" role="button">ver más</a></p>
+
+        
 	{% endfor %}
 
-    </ul>
+            </div>
 
     {% else %}
     <p>No hay datos con esa descripción.</p>
