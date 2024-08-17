@@ -1,29 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leo los profesores</title>
-</head>
-<body>
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
 
 
-    {% for p in profesores %}
+<ul>
 
-        <li>{{p}}</li>  
-        <button>
-            <a href="{% url 'EliminarProfesor' p.nombre %}"> Eliminar</a>
-            <a href="{% url 'EditarProfesor' p.nombre %}"> Editar</a>
-        </button>
+</ul>
 
 
 
-    {% endfor %}
 
-    <br>
-    <a href="profesores">Agregar otro Profesor</a>
+<main>
+
+
+
+    <!-- subheader. -->
+
+
+
+
+
+    <div class="container mt-4 ">
+
+
+
+
+
+
+        <div class="container">
+
+
+            <div class="featurette  mt-4">
+
+
+
+
+                <h1>Nosotros</h1>
+
+                <p class=" mt-4">Ayudamos a las empresas a explotar su potencial en la era digital y a transformar lo
+                    que hacen
+                    y cómo lo
+                    hacen.
+                </p>
+                <p> Ayudamos a construir ventajas competitivas sostenibles identificando áreas en las que hay que
+                    invertir o
+                    racionalizar, desarrollando una agenda transformadora de la estructura de costos a lo largo de toda
+                    la cadena
+                    de valor e implantando un modelo organizativo coherente con el crecimiento rentable.</p>
+
+
+                <div class="row">
+                    <div class="col-md-7 primary nosotros padding ">
+                        <h1>Somos una red de firmas presente en Argentina comprometidos a brindar servicios de calidad
+                            en auditoría,
+                            consultoría y outsourcing.</h1>
+                    </div>
+                    <div class="col-md-5 primary"> <img class="img-fluid" src= "{%static 'AppCoder/assets/img/Qlik-img-5.jpg' %}"
+                            alt="Qlik Sense" />
+                    </div>
+
+                </div>
+
+                <div class="row darkI nosotros">
+                    <div class="col-md-12 mapa ">
+                        <h3><strong>Nuestro propósito es construir confianza en la sociedad y resolver problemas
+                                importantes
+                            </strong>, basado en valores que son nuestros pilares: actuamos con integridad, trabajamos
+                            juntos,
+                            reimaginamos lo posible, nos interesamos, hacemos la diferencia.</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="row darkI mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.107182131442!2d-60.6934293851513!3d-31.630915613825806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b5a9ecb9e3185d%3A0x7af8f05ee495fc39!2sSarmiento%204240%2C%20S3002%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1647991095050!5m2!1ses-419!2sar"
+                        class=" w-100 h-100" loading="lazy"></iframe>
+                </div>
+                <div class="row featurette">
+                    <div class="col-md-7 padding-1 mt-4">
+
+                        <h2>Nuestra amplia experiencia profesional asesorando a pequeñas y medianas empresas, mediante:
+                        </h2>
+
+                        <ul>
+                            <li>Conocimientos profundos en diversas industrias.</li>
+                            <li>Utilización de tecnología avanzada y mejores prácticas.</li>
+                            <li>Flexibilidad y capacidad para anticiparnos a las necesidades de nuestros clientes.</li>
+                            <li>Compromiso con nuestros clientes.</li>
+                        </ul>
+                        <p>Contamos con recursos especializados en diversas disciplinas e industrias destinadas&nbsp;a
+                            ofrecer un
+                            asesoramiento integral, flexible y a la medida de tus necesidades. Privilegiamos el contacto
+                            fluido y
+                            personal con nuestros clientes acompañándolos en su crecimiento en el mediano y largo plazo.
+                        </p>
+                    </div>
+                    <div class="col-md-5 mt-4">
+                        <img class="img-fluid " src=  "{%static 'AppCoder/assets/img/Qlik-img-3.jpg' %}" alt="Qlik Sense" />
+                    </div>
+
+                    <p><a class="btn btn-lg btn-primary " href="{% url 'Profesores'  %}">Crear Profesor</a></p>
+                  
+                </div>
+
+
+                {% for p in profesores %}
 
     
-</body>
-</html>
+  
+                <H3>{{p}}</H3>  
+                <br>
+        
+        
+        
+            {% endfor %}
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    </div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}

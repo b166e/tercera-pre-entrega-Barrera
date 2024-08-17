@@ -12,7 +12,69 @@
     <form action="" method="POST">{% csrf_token %}
 
         <!-- Acá está la magia de Django-->
-        
+        <div class="container darkII mt-5 mb-2">
+
+            <div class="container">
+      
+      
+      
+              <div class="featurette  mt-4 padding">
+      
+      
+      
+      
+                <h1>Clientes</h1>
+      
+                <h3 class=" mt-4"> Ayudamos a las empresas a explotar su potencial en la era digital y a transformar lo que
+                  hacen y cómo lo
+                  hacen.
+                </h3>
+      
+              </div>
+      
+      
+      
+              <div class="container padding darkII  ">
+      
+      
+      
+                <div class="row ">
+                  <div class="col-lg-4 ml-2">
+                    <img class="rounded-circle" src="../assets/img/amd.png">
+                    <h2>AMD</h2>
+                    <p class="w-75"> Advanced Micro Devices, Inc. es una compañía estadounidense de semiconductores </p>
+                    <p><a class="w-50 btn btn-lg btn-primary " href="#" role="button">ver más</a></p>
+      
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4 ml-2">
+                    <img class="rounded-circle" src="../assets/img/epson.png" alt="Generic placeholder image" width="140"
+                      height="140">
+                    <h2>Epson</h2>
+                    <p class="w-75">Seiko Epson Corporation o Epson, es una compañía japonesa y uno de los mayores fabricantes
+                      del mundo de
+                      impresoras de inyección de tinta </p>
+                    <p><a class="w-50 btn btn-lg btn-primary" href="#" role="button">ver más</a></p>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4 ml-2">
+                    <img class="rounded-circle" src="../assets/img/gigabyte.png" alt="Generic placeholder image" width="140"
+                      height="140">
+                    <h2>Gigabyte</h2>
+                    <p class="w-75">Gigabyte Technology es una empresa fabricante de hardware con sede en Taiwán, más conocida
+                      por sus
+                      placas
+                      base.</p>
+                    <p><a class="w-50 btn btn-lg btn-primary" href="#" role="button">ver más</a></p>
+                  </div><!-- /.col-lg-4 -->
+                </div>
+              </div>
+      
+      
+            </div>
+       
+      
+      
+         
+          </div>
         <table>
             {{ miFormulario.as_table }}
         </table>

@@ -1,19 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Borrar</title>
-</head>
-<body>
 
 
-    <form method="post">{% csrf_token %}
-        ¿Estás seguro que deseas borrar el curso "{{ object }}"?
-        <input type="submit" value="Submit" />
-    </form>
+
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <div class="container darkII mt-5 mb-2">
+
+        <div class="container">
+  
+  
+  
+          <div class="featurette  mt-4 padding">
+  
+  
+  
+  
+
+  
+            <form method="post">{% csrf_token %}
+                <h3>   
+                    <i>      ¿Estás seguro que deseas borrar el curso "{{ object }}"?</i></h3>
+          
+            
+                <input class="w-50 btn btn-lg btn btn-danger"" type="submit" value="Borrar" />
+            </form>
+  
+          </div>
+          
+   
+  
+  
+  
+          
+  
+           
+          </div>
+  
+  
+        </div>
+   
+  
+  
+     
+      </div>
+
+
 
     
-</body>
-</html>
+
+    {% endblock %}

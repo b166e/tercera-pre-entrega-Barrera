@@ -1,32 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos_List</title>
-</head>
-<body>
+{% extends "AppCoder/padre.html" %}
 
-    <h1>Cursos de Coder - Python</h1>
-    <ul>
-        {% for curso in object_list %}
+{% load static %}
 
-            <li>
-                <p>NOMBRE: {{ curso.nombre }} </p>
-                <p> 
-                    <a href="{% url 'Detail' curso.id %}">Ver</a> | 
-                    <a href="{% url 'Edit' curso.id %}">Editar</a> | 
-                    <a href="{% url 'Delete' curso.id %}">Borrar</a> 
-                
-                </p> 
-            </li>
-
-        {% endfor %}
-    </ul>
-
-    <a href="{% url 'New'  %}">Nuevo</a> | 
+{% block contenidoQueCambia %}
 
 
-</body>
-</html>
+<ul>
+
+</ul>
+
+
+
+
+<main>
+
+
+
+    <!-- subheader. -->
+
+
+
+
+
+    <div class="container mt-4 ">
+
+
+
+
+
+        <!-- /Servicios y Soluciones -->
+        <div class="container  mt-4">
+            <div class="row featurette">
+                <div class="col-md-6 order-md-2 padding-1">
+                    <h2>Optimiza tu Previsión de Ventas con Datos y Análisis Avanzados</h2>
+                    <p>Eleva la precisión de tus previsiones de ventas y mejora la gestión de oportunidades con una visión integral de todo el ciclo de ventas. Nuestros cursos te enseñarán a utilizar Qlik Sense para analizar datos de ventas, marketing y financieros, proporcionando el contexto necesario para planificar el futuro con confianza.
+
+                    </p>
+                    <p><a class="btn btn-lg btn-primary " href="{% url 'Cursos'  %}">Crear Curso</a></p>
+                  
+                </div>
+                <div class="col-md-6 order-md-1 padding-1">
+                    <img class="img-fluid" src="{%static 'AppCoder/assets/img/Qlik-img-4.jpg' %}" alt="Qlik Sense" />
+                </div>
+            </div>
+
+            <hr class="featurette-divider ">
+            {% for curso in object_list %}
+            <div class=" text-center ">
+
+
+
+
+
+                <div class=" padding-1">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">{{ curso.nombre }}</h4>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <button type="button" class="w-50 btn btn-primary mb-2">
+                                        <a href="{% url 'Detail' curso.id %}" class="text-white">Ver</a>
+                                    </button>
+                                    <button type="button" class="w-50 btn btn-secondary mb-2">
+                                        <a href="{% url 'Edit' curso.id %}" class="text-white">Editar</a>
+                                    </button>
+                                    <button type="button" class="w-50 btn btn-danger">
+                                        <a href="{% url 'Delete' curso.id %}" class="text-white">Borrar</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    </div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
